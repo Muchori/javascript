@@ -1,3 +1,9 @@
+/**
+ *
+ * The DOM defines a standard for accessing documents: "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+ *
+ */
+
 /*
  * get element by id - document.getElementNyId
  *
@@ -251,7 +257,7 @@ link.removeAttribute("href"); */
   e.preventDefault();
 }); */
 
-document.querySelector(".clear-tasks").addEventListener("click", onClick);
+/* document.querySelector(".clear-tasks").addEventListener("click", onClick);
 
 function onClick(e) {
   let val;
@@ -264,19 +270,20 @@ function onClick(e) {
   val = e.target.className;
 
   console.log(val);
-}
+} */
 
 /**
  * FORM EVEENTS
  */
 
-const form = document.querySelector("form");
+/* const form = document.querySelector("form");
 const taskInput = document.getElementById("task");
 const heading = document.querySelector("h5");
+const select = document.querySelector("select");
 //clear value in input
 taskInput.value = "";
 
-form.addEventListener("submit", runEvent);
+form.addEventListener("submit", runEvent); */
 
 //keydown
 //taskInput.addEventListener("keydown", runEvent);
@@ -287,10 +294,55 @@ form.addEventListener("submit", runEvent);
 //focus
 //taskInput.addEventListener("focus", runEvent);
 
-function runEvent(e) {
+//change event listener
+//select.addEventListener("change", runEvent);
+
+/* function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
 
+  //heading.innerText = e.target.value;
   //console.log(taskInput.value);
 
-  e.preventDefault();
-}
+  //e.preventDefault();
+} */
+
+/**
+ *
+ * EVENTS BUBBLING
+ *
+ */
+
+// document.querySelector(".card-title").addEventListener("click", function () {
+//   console.log("card title");
+// });
+// document.querySelector(".card").addEventListener("click", function () {
+//   console.log("card");
+// });
+
+// document.querySelector(".card-content").addEventListener("click", function () {
+//   console.log("card content");
+// });
+// document.querySelector(".col").addEventListener("click", function () {
+//   console.log("col");
+// });
+
+/**
+ * EVENTS DELGATION
+ */
+
+// const deleteItem = document.querySelector(".delete-item");
+
+// deleteItem.addEventListener("click", itemDelete);
+
+/* document.body.addEventListener("click", itemDelete);
+function itemDelete(e) {
+  // if (e.target.parentElement.className === "delete-item secondary-content") {
+  //   console.log("delete item");
+  // }
+  if (e.target.parentElement.classList.contains("delete-item")) {
+    console.log("delete item");
+
+    //removing list in DOM
+    e.target.parentElement.parentElement.remove();
+  }
+} */
