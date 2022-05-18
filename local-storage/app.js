@@ -1,18 +1,18 @@
 /**
  * set local storage
  */
-//localStorage.setItem("name", "John");
-//localStorage.setItem("age", "23");
+localStorage.setItem("name", "John");
+localStorage.setItem("age", "23");
 /**
  * set session storage
  */
-//sessionStorage.setItem("name", "Lucy");
+sessionStorage.setItem("name", "Lucy");
 
 /**
  * remove from storage
  */
 
-//localStorage.removeItem("name");
+localStorage.removeItem("name");
 
 /**
  * get from storage
@@ -24,7 +24,7 @@ const age = localStorage.getItem("age");
 /**
  * clear from storage
  */
-//localStorage.clear();
+localStorage.clear();
 
 //console.log(name, age);
 
