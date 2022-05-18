@@ -45,7 +45,6 @@ function* createIds() {
     yield index++;
   }
 }
-
 const gen = createIds();
 console.log(gen.next().value);
 console.log(gen.next().value);
