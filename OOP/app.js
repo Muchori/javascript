@@ -272,3 +272,34 @@ const vettel = new School("Sebastian", "Vettel", "888-000-2222", "Premium");
 console.log(vettel);
 console.log(vettel.greeting());
 console.log(School.getMemberCost());
+
+/* *
+ * Symbol()
+ * Unique Object keys
+ */
+const KEY_1 = Symbol();
+const KEY_2 = Symbol("sysm2");
+
+const myObject = {};
+
+myObject[KEY_1] = "Prop1";
+myObject[KEY_2] = "Prop2";
+// regular properties
+myObject.key3 = "Prop3";
+myObject.key4 = "Prop4";
+
+/* console.log(myObject[KEY_1]);
+console.log(myObject[KEY_2]); */
+
+/**
+ * Symbols are not enumarable in for...in
+ */
+for (let i in myObject) {
+  console.log(`${i}: ${myObject[i]}`);
+}
+
+/**
+ * Symbols are ignored bu JSON.stringify
+ */
+console.log(JSON.stringify({ key: "prop" }));
+console.log(JSON.stringify({ [Symbol("sysm1")]: "prop" }));
