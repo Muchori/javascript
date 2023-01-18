@@ -6,7 +6,7 @@ let a, b
 ;[a, b] = [100, 200]
 
 /**
- * rest pattern
+ * Rest pattern
  * ... (three dots) -> spread operator
  */
 ;[a, b, c, ...rest] = [100, 200, 300, 400, 500]
@@ -99,7 +99,7 @@ function objectify(key, value) {
 }
 
 /**
- * Template Literals
+ * Template literals
  */
 function welcomeMsg(fName, lName, email) {
   return `Welcome ${fName} ${lName} to our site. Your email is ${email}`
