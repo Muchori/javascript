@@ -9,7 +9,7 @@ localStorage.setItem("age", "23");
 sessionStorage.setItem("name", "Lucy");
 
 /**
- * remove from storage
+ * REMOVE FROM LOCAL STORAGE
  */
 
 localStorage.removeItem("name");
